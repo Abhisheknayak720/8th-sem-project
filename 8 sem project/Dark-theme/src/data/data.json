@@ -1,0 +1,175 @@
+{
+  "Header": {
+    "title": "Dive into Paintora Your Artistic Oasis",
+    "paragraph": "The largest digital place for Art. Discover and manage personalized digital art."
+  },
+  "About": {
+    "paragraph": "Welcome to Paintora, where art comes alive. Explore a world of creativity—upload your masterpieces or discover a diverse array of categorized artworks. From landscapes to digital art, find, share, and buy. Join a vibrant community, celebrate art's beauty, and build your personalized gallery. Start your artistic journey today at Paintora.",
+    "Why": [
+      "Diverse Curation",
+      "User-Friendly",
+      "Global Community", 
+      "Personalized Galleries"
+    ],
+    "Why2": [
+      "Secure paltform",
+"Inspiration Abounds",
+"Innovative Categories",
+ "Super Art Tips"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+  "Services": [
+    {
+      "icon": "fa fa-wordpress",
+      "name": "Lorem ipsum dolor",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-cart-arrow-down",
+      "name": "Consectetur adipiscing",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-cloud-download",
+      "name": "Lorem ipsum dolor",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "Abhishek Naik",
+      "job": "Developer"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Akash Persetti",
+      "job": "Back-end Developer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Varun Sanjee",
+      "job": "Front-end Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Bhuvana K",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "The National Institute of Engineering, Mysuru, KA, IN - 570008. ",
+    "phone2": "+91 9019-290670",
+    "phone1": "+91 6363-750120",
+    "phone3": "+91 8310-368071",
+    "phone4": "+91 8861-970059",
+    "email1": "abhisheknaik720@gmail.com",
+    "email2": "akash.hp@icloud.com",
+    "email3": "ssvarunlm10@gmail.com",
+    "email4": "bhuvana@gmail.com",
+    "facebook": "https://www.facebook.com/thewebsitebrewery",
+    "instagram": "https://instagram.com/daily.spinning.catt?igshid=OGQ5ZDc2ODk2ZA==",
+    "pinterest": "https://pin.it/1eu4OgZ"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "AI Art Recommendation Engine",
+      "text": "Personalized art suggestions driven by AI, helping users discover art aligned with their tastes."
+    },
+    {
+      "icon": "fa fa-brands fa-artstation",
+      "title": "Artistic Community Building and Creation",
+      "text": "Facilitating real-time collaboration for artistic community building, fostering creativity and engagement."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Artwork Authentication and Provenance Tracking",
+      "text": "Verification of artwork authenticity and tracking of its origin using blockchain and tracking methods."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Artwork Analysis and Insights",
+      "text": "In-depth insights into artwork, including techniques, history, and cultural context."
+    }
+  ]
+}
