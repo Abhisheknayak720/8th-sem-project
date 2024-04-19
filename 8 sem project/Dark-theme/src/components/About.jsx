@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import JsonData from "../../src/data/data.json";
 
-const About = (props) => {
+const About = () => {
+  const [landingPageData, setLandingPageData] = useState({});
+  
+  
+  useEffect(() => {
+    setLandingPageData(JsonData);
+  }, []);
   return (
     <div id="about">
       <div className="container">
@@ -12,13 +19,13 @@ const About = (props) => {
           <div className="col-xs-12 col-md-6">
             <div className="about-text">
               <h2>About Us</h2>
-              <p>{props.data ? props.data.paragraph : "loading..."}</p>
+              <p>{landingPageData.About ? landingPageData.About.paragraph : "loading..."}</p>
               <h3>Why Choose Us?</h3>
               <div className="list-style">
                 <div className="col-lg-6 col-sm-6 col-xs-12">
                   <ul>
-                    {props.data
-                      ? props.data.Why.map((d, i) => (
+                    {landingPageData.About
+                      ? landingPageData.About.Why.map((d, i) => (
                           <li key={`${d}-${i}`}>{d}</li>
                         ))
                       : "loading"}
@@ -26,8 +33,8 @@ const About = (props) => {
                 </div>
                 <div className="col-lg-6 col-sm-6 col-xs-12">
                   <ul>
-                    {props.data
-                      ? props.data.Why2.map((d, i) => (
+                    {landingPageData.About
+                      ? landingPageData.About.Why2.map((d, i) => (
                           <li key={`${d}-${i}`}> {d}</li>
                         ))
                       : "loading"}

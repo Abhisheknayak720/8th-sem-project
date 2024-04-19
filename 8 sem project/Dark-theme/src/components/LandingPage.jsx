@@ -6,7 +6,7 @@ import { Header } from "./header";
 import { Features } from "./features";
 import About from "./About"
 // import { Services } from "./services";
-import Gallery from "./Gallery";
+// import Gallery1 from "./Gallery1";
 import { Testimonials } from "./testimonials";
 import { Team } from "./Team";
 import { Contact } from "./contact";
@@ -35,11 +35,11 @@ const LandingPage = () => {
     <div>
        <Navigation />
         <Header data={landingPageData.Header} />
-        <About data={landingPageData.About} />
-        <Features data={landingPageData.Features} />
+        <About />
+        <Features />
         {/* <Gallery data={landingPageData.Gallery} /> */}
-        <Testimonials data={landingPageData.Testimonials} />
         <Team data={landingPageData.Team} />
+        <Testimonials data={landingPageData.Testimonials} />
         <Contact data={landingPageData.Contact} />
     </div>
   );

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import ImgCmp from "./ImgComp";
 
 const StyledCardContainer = styled.div`
   margin-top: 20px; /* Adjust margin as needed */
@@ -28,11 +29,12 @@ const Gallery = (props) => {
         </div>
         <StyledCardContainer>
           <GridExample />
+          <ImgCmp />
         </StyledCardContainer>
         <UploadButtonContainer>
           <Link
             to="/imageUpload"
-            style={{ marginTop: "3rem", fontSize: "1.5rem", backgroundColor: "blue", borderRadius: "5rem", color: "white" }}
+            style={{ marginTop: "3rem", fontSize: "1.5rem", backgroundColor: "blue", borderRadius: "1rem", color: "white", padding: "1rem" }}
           >
             Upload Image
           </Link>

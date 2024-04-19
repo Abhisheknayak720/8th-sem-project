@@ -678,3 +678,92 @@ label {
     margin: 50px 0;
   }
 }
+
+
+.greyhover {
+  color: grey;
+}
+
+/* .greyhover :hover {
+  color: white;
+} */
+
+.intr-container {
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.intr-title {
+  margin-bottom: 4rem;
+}
+
+.intr-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.intr-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.intr-checkbox input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.intr-checkbox input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.intr-submit {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f875aa;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.intr-submit:hover {
+  background-color: #d7548e;
+}
+
+/* Add this CSS to your existing styles */
+.intr-checkbox input[type="checkbox"] {
+  display: none; /* Hide the default checkbox */
+}
+
+/* Create a custom checkbox */
+.intr-checkbox input[type="checkbox"] + .custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #333; /* Border color for unchecked checkbox */
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Style the custom checkbox when checked */
+.intr-checkbox input[type="checkbox"]:checked + .custom-checkbox::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #f875aa; /* Pink color */
+  border-radius: 2px;
+}
+
+/* Adjust the margin between the checkbox and the label */
+.intr-checkbox .custom-checkbox {
+  margin-right: 0.5rem;
+}
+
+
+

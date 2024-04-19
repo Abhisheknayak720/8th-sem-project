@@ -1,15 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
+export const Navigation = (props) => {  
 
-export const Navigation = (props) => {
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -26,13 +20,11 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
             <span>
-              {/* <img src="img/paintora-logos.png" width={50} />&nbsp; */}
-              PAINTORA
+              <Link to="/" className="navbar-brand page-scroll">
+                PAINTORA
+              </Link>
             </span>
-          </a>{" "}
-          {/* <img src="img/paintora-logos.png" width={50} /> &nbsp; */}
         </div>
 
         <div
@@ -56,13 +48,13 @@ export const Navigation = (props) => {
               </Link>
             </li>
             <li>
-              <a href="#testimonials" className="page-scroll">
-                Testimonials
+              <a href="#team" className="page-scroll">
+                Team
               </a>
             </li>
             <li>
-              <a href="#team" className="page-scroll">
-                Team
+              <a href="#testimonials" className="page-scroll">
+                Testimonials
               </a>
             </li>
             <li>
@@ -70,27 +62,11 @@ export const Navigation = (props) => {
                 Contact
               </a>
             </li>
-            {/* <li>
-              <AccountBoxIcon fontSize="large" />
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-              </Menu>
-            </li> */}
+            <li>
+              <Link to="/signin" className="page-scroll">
+                Sign in
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

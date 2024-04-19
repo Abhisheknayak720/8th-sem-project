@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,7 +12,8 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
-import SignUp from './SignUp';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -46,14 +47,69 @@ let darkTheme = createTheme({
 darkTheme = responsiveFontSizes(darkTheme);
 
 export default function SignInSide() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  const navigate = useNavigate();
+  
+  const [email, setEmail] = useState("");
+  const [password, setPwd] = useState("");
+  const [signinMessage, setSigninMessage] = useState("");
+
+  const history = useNavigate();
+
+  const setEmailHandler = (e) => {
+      setEmail(e.target.value);
+  }
+
+  const setPwdHandler = (e) => {
+      setPwd(e.target.value);
+  }
+
+  async function addSignInData(e) {
+    e.preventDefault();
+
+    // Retrieve form data
+    const formData = new FormData();
+    formData.append("email", email); 
+    formData.append("password", password);
+
+
+    const config = {
+        headers: {
+            "Content-Type": "multipart/form-data"
+        }
+    };
+
+    try {
+      const res = await axios.post("/signin", formData, config);
+      if (res.status === 200) {
+        console.log("Form submitted successfully!");
+  
+        // Redirect to the appropriate page based on response
+        if (res.data.message === "Signin successful") {
+          // Redirect to the desired page after successful sign-in
+          setSigninMessage("Sign In successful. Redirecting to the Gallery...");
+          setTimeout(()=>{
+            navigate("/gallery");
+          },1000);
+       
+        }
+        else if(res.data.message === "Email not found, redirecting to sign up..."){
+          setSigninMessage("Email not found, redirecting to sign up...");
+          setTimeout(() => {
+            navigate("/signup");
+          }, 2000);
+          
+        } else {
+          // Display error or other messages
+          setSigninMessage(res.data.message);
+        }
+      } else {
+        console.log("Error:", res.data);
+        setSigninMessage(res.data.message || "An error occurred");
+      }
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }
+  }
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -65,7 +121,7 @@ export default function SignInSide() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
+            backgroundImage: 'url(https://source.unsplash.com/random?paintings)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -76,7 +132,7 @@ export default function SignInSide() {
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
-              my: 8,
+              my: 20,
               mx: 4,
               display: 'flex',
               flexDirection: 'column',
@@ -89,7 +145,7 @@ export default function SignInSide() {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box component="form" noValidate onSubmit={addSignInData} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required
@@ -99,6 +155,7 @@ export default function SignInSide() {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                onChange={setEmailHandler}
               />
               <TextField
                 margin="normal"
@@ -109,6 +166,7 @@ export default function SignInSide() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={setPwdHandler}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
@@ -122,6 +180,7 @@ export default function SignInSide() {
               >
                 Sign In
               </Button>
+              <div style={{ color: 'red' }}>{signinMessage}</div>
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
@@ -129,7 +188,7 @@ export default function SignInSide() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#">
+                  <Link href="/signup">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
